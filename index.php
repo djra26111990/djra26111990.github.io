@@ -1,6 +1,13 @@
 <?php
 
-if($_POST["submit"]) {
+if (!isset($_POST['submit'])) {
+
+// form was submmitted
+}
+
+else
+
+{
 
 $recipient="djra26111990@gmail.com";
 $subject="Mensaje de comentario recibido";
@@ -60,7 +67,7 @@ $thankYou="<p>Gracias! su mensaje ha sido enviado!.</p>";
       </div>
     </section>
     <section class="section-contacto">
-    <?=$thankYou ?>
+    <?php $thankYou=""; echo $thankYou; ?>
     <form method="post" action="index.php">
         <label>Name:</label>
         <input name="sender">
