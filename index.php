@@ -68,7 +68,7 @@ $thankYou="<p>Gracias! su mensaje ha sido enviado!.</p>";
       </div>
     </section>
     <section class="section-contacto">
-    
+    <h1>Contáctanos</h1>
     <?=$thankYou ?>
     
     <form method="post" action="index.php">
@@ -87,7 +87,7 @@ $thankYou="<p>Gracias! su mensaje ha sido enviado!.</p>";
     <footer class="footer">
         <h1>Siguenos en: </h1>
         <ul>
-            <li><a href="#"><i class="fab fa-facebook-f fa-3x"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook-square fa-3x"></i></a></li>
             <li><a href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
         </ul>
     </footer>
