@@ -85,7 +85,7 @@ $thankYou="<p>Gracias! su mensaje ha sido enviado!.</p>";
     </form>
     </section>
     <footer class="footer">
-        <h1>Siguenos en: </h1>
+        <h1>Síguenos: </h1>
         <ul>
             <li><a href="#"><i class="fab fa-facebook-square fa-3x"></i></a></li>
             <li><a href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
