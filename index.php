@@ -3,6 +3,7 @@
 if (!isset($_POST['submit'])) {
 
 // form was submmitted
+$thankYou="";
 }
 
 else
@@ -67,7 +68,9 @@ $thankYou="<p>Gracias! su mensaje ha sido enviado!.</p>";
       </div>
     </section>
     <section class="section-contacto">
-    <?php $thankYou=""; echo $thankYou; ?>
+    
+    <?=$thankYou ?>
+    
     <form method="post" action="index.php">
         <label>Name:</label>
         <input name="sender">
