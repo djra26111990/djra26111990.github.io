@@ -61,7 +61,7 @@ $thankYou="<p>Gracias! su mensaje ha sido enviado!.</p>";
     </section>
     <section class="section-contacto">
     <?=$thankYou ?>
-    <form method="post" action="contact.php">
+    <form method="post" action="index.php">
         <label>Name:</label>
         <input name="sender">
 
