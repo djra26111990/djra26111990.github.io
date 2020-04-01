@@ -84,5 +84,18 @@ $thankYou="<p>Gracias! su mensaje ha sido enviado!.</p>";
         <input type="submit" name="submit">
     </form>
     </section>
+    <footer class="footer">
+        <h1>Siguenos en: </h1>
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook-f fa-3x"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
+        </ul>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha256-+xf9aJnHocnmrigq2hIDJGBSAnJdF5NH+Ooe5J2PHiI=" crossorigin="anonymous"></script>
+    
+    <script>
+        //iniciamos rellax
+    </script>
   </body>
 </html>
