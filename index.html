@@ -51,20 +51,6 @@
     </section>
     <section class="section section-contacto">
     <h1>Contáctanos</h1>
-   
-    
-    <form method="post" action="index.php">
-        <label>Name:</label>
-        <input name="sender">
-
-        <label>Email address:</label>
-        <input name="senderEmail">
-
-        <label>Message:</label>
-        <textarea rows="5" cols="20" name="message"></textarea>
-
-        <input class="btn" type="submit" name="submit">
-    </form>
     <div class="ui one column grid container">
   <div class="column">
     <div class="ui segment">
@@ -73,7 +59,7 @@
         <div class="header">¡LISTO!</div>
         <p class="header">¡Tu comentario ha sido enviado!</p>
       </div>
-      <form method="post" id="form" class="ui form" action="index.php">
+      <form method="post" id="form" class="ui form" novalidate>
         <div class="field">
           <label>Nombre y Apellido</label>
           <input name="sender" data-validation="required">
@@ -90,7 +76,7 @@
             <textarea name="message" data-validation=""></textarea>
         </div>
 
-        <input class="btn" type="submit" name="submit">
+        <button class="ui button" type="submit">Submit</button>
       </form>
     </div>
   </div>
