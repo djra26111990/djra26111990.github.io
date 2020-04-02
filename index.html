@@ -1,29 +1,3 @@
-<?php
-
-if (!isset($_POST['submit'])) {
-
-// form was submmitted
-//$thankYou="";
-}
-
-else
-
-{
-
-$recipient="djra26111990@gmail.com";
-$subject="Mensaje de comentario recibido";
-$sender=$_POST["sender"];
-$senderEmail=$_POST["senderEmail"];
-$phone=$_POST["phone"];
-$message=$_POST["message"];
-
-$mailBody="Nombre: $sender\nEmail: $senderEmail\nTélefono: $phone\n$message";
-mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
-
-//$thankYou="<p>Gracias! su mensaje ha sido enviado!.</p>";
-
-}
-?>
 <!DOCTYPE html>
 <html>
   <head>
