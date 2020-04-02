@@ -41,7 +41,7 @@ function validate() {
     e.preventDefault();
     successMessage.className = "ui success message";
     form.outerHTML = "";
-   // delete form;
+    delete form;
   }, false)
 }
 validate();
