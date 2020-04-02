@@ -113,7 +113,7 @@ mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
         </div>
         <div class="field">
             <label>Mensaje</label>
-            <textarea name="message" data-validation="required"></textarea>
+            <textarea name="message" data-validation=""></textarea>
         </div>
 
         <input class="btn" type="submit" name="submit">
