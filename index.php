@@ -3,7 +3,7 @@
 if (!isset($_POST['submit'])) {
 
 // form was submmitted
-$thankYou="";
+//$thankYou="";
 }
 
 else
@@ -14,12 +14,13 @@ $recipient="djra26111990@gmail.com";
 $subject="Mensaje de comentario recibido";
 $sender=$_POST["sender"];
 $senderEmail=$_POST["senderEmail"];
+$phone=$_POST["phone"];
 $message=$_POST["message"];
 
-$mailBody="Nombre: $sender\nEmail: $senderEmail\n\n$message";
+$mailBody="Nombre: $sender\nEmail: $senderEmail\nTélefono: $phone\n$message";
 mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
 
-$thankYou="<p>Gracias! su mensaje ha sido enviado!.</p>";
+//$thankYou="<p>Gracias! su mensaje ha sido enviado!.</p>";
 
 }
 ?>
@@ -29,6 +30,7 @@ $thankYou="<p>Gracias! su mensaje ha sido enviado!.</p>";
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
   <link rel="stylesheet" href="styles.css">
   <title>Escena compañia de arte y teatro</title>
   </head>
@@ -75,7 +77,7 @@ $thankYou="<p>Gracias! su mensaje ha sido enviado!.</p>";
     </section>
     <section class="section section-contacto">
     <h1>Contáctanos</h1>
-    <?=$thankYou ?>
+   
     
     <form method="post" action="index.php">
         <label>Name:</label>
@@ -89,6 +91,36 @@ $thankYou="<p>Gracias! su mensaje ha sido enviado!.</p>";
 
         <input class="btn" type="submit" name="submit">
     </form>
+    <div class="ui one column grid container">
+  <div class="column">
+    <div class="ui segment">
+      <div class="ui error message hidden"></div>
+      <div class="ui success message hidden">
+        <div class="header">¡LISTO!</div>
+        <p class="header">¡Tu comentario ha sido enviado!</p>
+      </div>
+      <form method="post" id="form" class="ui form" action="index.php">
+        <div class="field">
+          <label>Nombre y Apellido</label>
+          <input name="sender" data-validation="required">
+        <div class="field">
+          <label>Email</label>
+          <input type="email" name="senderEmail" data-validation="required email">
+        </div>
+        <div class="field">
+          <label>Télefono</label>
+          <input name="phone" data-validation="required phone">
+        </div>
+        <div class="field">
+            <label>Mensaje</label>
+            <textarea name="message" data-validation="required"></textarea>
+        </div>
+
+        <input class="btn" type="submit" name="submit">
+      </form>
+    </div>
+  </div>
+</div>
     </section>
     <section class="section footer">
         <div class="div-footer">
@@ -101,9 +133,10 @@ $thankYou="<p>Gracias! su mensaje ha sido enviado!.</p>";
     </section>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha256-+xf9aJnHocnmrigq2hIDJGBSAnJdF5NH+Ooe5J2PHiI=" crossorigin="anonymous"></script>
-    
+    <script src="/js/index.js"></script>
     <script>
         //iniciamos rellax
+        var rellax = new Rellax('.rellax');
     </script>
   </body>
 </html>
