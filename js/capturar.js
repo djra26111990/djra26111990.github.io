@@ -8,7 +8,8 @@ function capturar() {
    
    var messsgeId = document.getElementById("message").value;
    
-   var arrCaptura = [nombreId, emailId, phoneId, messsgeId]
+   var arrCaptura = [nombreId, emailId, phoneId, messsgeId];
    
    return console.log(arrCaptura[0]);
 }
+
