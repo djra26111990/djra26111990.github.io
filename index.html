@@ -94,10 +94,21 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha256-+xf9aJnHocnmrigq2hIDJGBSAnJdF5NH+Ooe5J2PHiI=" crossorigin="anonymous"></script>
     <script src="/js/index.js"></script>
-    <script src="/js/capturar.js"></script>
     <script>
         //iniciamos rellax
         var rellax = new Rellax('.rellax');
     </script>
+    function capturar (){
+var nombreId = document.getElementById("nombre").value;
+   
+   var emailId = document.getElementById("email").value;
+   
+   var phoneId = document.getElementById("phone").value;
+   
+   var messsgeId = document.getElementById("message").value;
+var arrCaptura = [nombreId, emailId, phoneId, messsgeId];
+   
+   return console.log(arrCaptura[0]);
+}
   </body>
 </html>
