@@ -110,12 +110,16 @@ var nombreId = document.getElementById("nombreId").value;
    var messsgeId = document.getElementById("messageId").value;
 var arrCaptura = [nombreId, emailId, phoneId, messsgeId];
    
+var mensajecorreo = "Nombre: "+nombreId+ "Email: "+emailId+ "Teléfono: "+phoneId+ "Mensaje: "+messsgeId+;
+
+console.log(mensajecorreo);
+
    Email.send({
      SecureToken: "668433e2-130b-43f0-be94-397fda07d1ac",
     To : 'djra26111990@gmail.com',
     From : "djra26111990@gmail.com",
     Subject : "Comentario recibido",
-    Body : "Nombre: "+nombreId+ "email: "+emailId+ "Teléfono: "+phoneId+ "Mensaje: "+messsgeId+
+    Body : +mensajecorreo+
    })
 }
 </script>
