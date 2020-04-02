@@ -62,18 +62,18 @@
       <form method="post" id="form" class="ui form" novalidate>
         <div class="field">
           <label>Nombre y Apellido</label>
-          <input name="sender" data-validation="required">
+          <input id="nombreId" name="sender" data-validation="required">
         <div class="field">
           <label>Email</label>
-          <input type="email" name="senderEmail" data-validation="required email">
+          <input id="emailId" type="email" name="senderEmail" data-validation="required email">
         </div>
         <div class="field">
           <label>Télefono</label>
-          <input name="phone" data-validation="required phone">
+          <input id="phoneId" name="phone" data-validation="required phone">
         </div>
         <div class="field">
             <label>Mensaje</label>
-            <textarea name="message" data-validation=""></textarea>
+            <textarea id="messageId" name="message" data-validation=""></textarea>
         </div>
 
         <button class="ui button" type="submit" onclick="capturar()">Submit</button>
