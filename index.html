@@ -108,9 +108,7 @@ var nombreId = document.getElementById("nombreId").value;
    var phoneId = document.getElementById("phoneId").value;
    
    var messsgeId = document.getElementById("messageId").value;
-var arrCaptura = [nombreId, emailId, phoneId, messsgeId];
    
-var mensajecorreo = "Mensaje: " + messageId;
 
 
    Email.send({
@@ -118,7 +116,7 @@ var mensajecorreo = "Mensaje: " + messageId;
     To : 'djra26111990@gmail.com',
     From : "djra26111990@gmail.com",
     Subject : "Comentario recibido",
-    Body : +mensajecorreo+
+    Body : "test"
    })
 }
 </script>
