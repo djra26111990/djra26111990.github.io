@@ -111,7 +111,7 @@
         </script>
         <script>
             (function(){
-                emailjs.init("<YOUR USER ID>");
+                emailjs.init("user_dyP5KRs4t0ZT4EAxKWqtz");
              })();
             const vue = new Vue({
                 el: '#app',
@@ -132,7 +132,7 @@
                             subject: this.subject,
                         };
                         
-                        emailjs.send("<YOUR SERVICE ID>","<YOUR TEMPLATE ID>", data)
+                        emailjs.send("daniel_rivas","form_contact", data)
                         .then(function(response) {
                             if(response.text === 'OK'){
                                 alert('El correo se ha enviado de forma exitosa');
