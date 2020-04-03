@@ -159,7 +159,7 @@ ul {
     text-shadow: 2px 2px 2px #9c9c9c;
 }
 
-/* Formulario de contacto */
+/* Formulario de contacto 
 p.parrafo-coment {
     color: green;
 }
@@ -168,7 +168,7 @@ textarea {
   resize: none;
 }
 
-/* Formulario de contacto */
+Formulario de contacto */
 input:invalid {
   border: 2px dashed red;
 }
