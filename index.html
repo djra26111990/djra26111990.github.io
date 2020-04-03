@@ -73,7 +73,7 @@
                         <label>
                             Correo:
                         </label>
-                        <input class="form-control" type="email" v-model="from_email" required>
+                        <input class="form-control" type="email" v-model="from_email" required pattern='/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'>
                         </input>
                     </div>
                     <div class="col-sm-6 col-sm-offset-3 form-group">
