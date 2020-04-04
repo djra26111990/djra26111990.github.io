@@ -126,6 +126,35 @@
         <script>
           Vue.use(VeeValidate);
         </script>
+<script>
+    import FormError from '../FormError';
+    export default {
+        name: "form-component",
+        components: {
+            FormError
+        },
+        data () {
+            return {
+                firstname: null,
+                lastname: null,
+                email: null,
+                password: null,
+                password_confirmation: null
+            }
+        },
+        methods: {
+            validateBeforeSubmit: function() {
+                this.$validator.validateAll().then((result) => {
+                    if (result) {
+                        alert('From Submitted!');
+                        return;
+                    }
+                    //errores
+                });
+            }
+        }
+    }
+</script>
         <script>
             (function(){
                 emailjs.init("user_dyP5KRs4t0ZT4EAxKWqtz");
