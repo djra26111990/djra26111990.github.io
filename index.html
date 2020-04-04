@@ -57,7 +57,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3 form-group">
                       <template>
-                        <form id="formcontact" method="POST" @submit.prevent="validateBeforeSubit">
+                        <form id="formcontact" method="POST" @submit.prevent="validateBeforeSubmit">
                         <label>
                             Nombre:
                         </label>
@@ -113,6 +113,15 @@
         </ul>
         </div>
     </section>
+<template>
+    <span v-show="errors_form.has(attribute_name)" class="help brand-color">{{ errors_form.first(attribute_name) }}</span>
+</template>
+
+<script>
+     default {
+        props: ['attribute_name', 'errors_form']
+    }
+</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js" integrity="sha256-ngFW3UnAN0Tnm76mDuu7uUtYEcG3G5H1+zioJw3t+68=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/vee-validate@<3.0.0/dist/vee-validate.js"></script>
 
@@ -127,8 +136,7 @@
           Vue.use(VeeValidate);
         </script>
 <script>
-    import FormError from '../FormError';
-    export default {
+    default {
         name: "form-component",
         components: {
             FormError
