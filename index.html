@@ -56,10 +56,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3 form-group">
+                      <template>
+                        <form id="formcontact" method="POST" @submit.prevent="validateBeforeSubit">
                         <label>
                             Nombre:
                         </label>
-                        <input v-validate="'required'" name="name" class="form-control" type="text" v-model="from_name">
+                        <input v-validate="'required'"
+                :class="{'has-errors': errors.has('name')}" name="name" class="form-control" type="text" v-model="from_name">
                         </input>
                         <span>{{ errors.first('name') }}</span>
                     </div>
@@ -67,15 +70,17 @@
                         <label>
                             Asunto:
                         </label>
-                        <input v-validate="'required'" class="form-control" type="text" name="subject" v-model="subject">
-                        </input>
+                        <input class="form-control" type="text" name="subject" v-model="subject" v-validate="'required'"
+                :class="{'has-errors': errors.has('subject')}">
+                       </input>
                         <span>{{ errors.first('subject') }}</span>
                     </div>
                     <div class="col-sm-6 col-sm-offset-3 form-group">
                         <label>
                             Correo:
                         </label>
-                        <input v-validate="'required|email'" class="form-control" name="name" type="email" v-model="from_email">
+                        <input class="form-control" name="name" type="email" v-model="from_email" v-validate="'required|email'"
+                :class="{'has-errors': errors.has('email')}">
                         </input>
                         <span>{{ errors.first('email') }}</span>
                     </div>
@@ -83,7 +88,8 @@
                         <label>
                             Mensaje:
                         </label>
-                        <textarea v-validate="'required'" name="message" class="form-control" v-model="message">
+                        <textarea name="message" class="form-control" v-model="message" v-validate="'required'"
+                :class="{'has-errors': errors.has('message')}">
                         </textarea>
                         <span>{{ errors.first('message') }}</span>
                     </div>
@@ -91,6 +97,8 @@
                         <button class="btn btn-success">
                             Enviar
                         </button>
+                        </form>
+                        </template>
                     </div>
                 </div>
             </div>
