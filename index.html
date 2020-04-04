@@ -56,10 +56,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3 form-group">
-                      <form action="https://vuejs.org/"
+                      <form id="form" action="https://vuejs.org/"
                       method="post"
                       novalidate="true"
                       >
+                      <p v-if="errors.length">
+    <b>Por favor, corrija el(los) siguiente(s) error(es):</b>
+    <ul>
+      <li v-for="error in errors">{{ error }}</li>
+    </ul>
+  </p>
+                        
                         <label>
                             Nombre:
                         </label>
@@ -150,6 +157,48 @@
                     }
                 }
             });
+        </script>
+        <script>
+const app = new Vue({
+  el: '#form',
+  data: {
+    errors: [],
+    from_name: null,
+    subject: null,
+    from_email: null,
+    message: null
+  },
+  methods: {
+    checkForm: function (e) {
+      this.errors = [];
+
+      if (!this.from_name) {
+        this.errors.push("El nombre es obligatorio.");
+      }
+      if (!this.subject) {
+        this.subject.push("El asunto es obligatorio.");
+      }
+      if (!this.from_email) {
+        this.errors.push('El correo electrónico es obligatorio.');
+      } else if (!this.validEmail(this.email)) {
+        this.errors.push('El correo electrónico debe ser válido.');
+      }
+      if (!this.message) {
+        this.messsge.push('El mensaje no puede estar vacío.')
+      }
+
+      if (!this.errors.length) {
+        return true;
+      }
+
+      e.preventDefault();
+    },
+    validEmail: function (email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+  }
+})
         </script>
   </body>
 </html>
