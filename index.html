@@ -64,7 +64,7 @@
                         <input v-validate="'required'"
                 :class="{'has-errors': errors.has('name')}" name="name" class="form-control" type="text" v-model="from_name">
                         </input>
-                        <span>{{ errors.first('name') }}</span>
+<FormError :attribute_name="'name'" :errors_form="errors"> </FormError>
                     </div>
                     <div class="col-sm-6 col-sm-offset-3 form-group">
                         <label>
@@ -73,7 +73,7 @@
                         <input class="form-control" type="text" name="subject" v-model="subject" v-validate="'required'"
                 :class="{'has-errors': errors.has('subject')}">
                        </input>
-                        <span>{{ errors.first('subject') }}</span>
+<FormError :attribute_name="'subject'" :errors_form="errors"> </FormError>
                     </div>
                     <div class="col-sm-6 col-sm-offset-3 form-group">
                         <label>
@@ -82,7 +82,7 @@
                         <input class="form-control" name="name" type="email" v-model="from_email" v-validate="'required|email'"
                 :class="{'has-errors': errors.has('email')}">
                         </input>
-                        <span>{{ errors.first('email') }}</span>
+<FormError :attribute_name="'email'" :errors_form="errors"> </FormError>
                     </div>
                     <div class="col-sm-6 col-sm-offset-3 form-group">
                         <label>
@@ -91,10 +91,10 @@
                         <textarea name="message" class="form-control" v-model="message" v-validate="'required'"
                 :class="{'has-errors': errors.has('message')}">
                         </textarea>
-                        <span>{{ errors.first('message') }}</span>
+<FormError :attribute_name="'message'" :errors_form="errors"> </FormError>
                     </div>
                     <div class="col-sm-6 col-sm-offset-3 text-center">
-                        <button class="btn btn-success">
+                        <button name="enviar" class="btn btn-success">
                             Enviar
                         </button>
                         </form>
