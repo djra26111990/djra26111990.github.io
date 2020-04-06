@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
         </link>
   <link rel="stylesheet" href="styles.css">
   <title>Escena compañia de arte y teatro</title>
@@ -108,8 +108,8 @@
         <div class="div-footer">
         <h1>Síguenos: </h1>
         <ul>
-            <li><a href="https://m.facebook.com/escenaarteyteatro/"><i class="fab fa-facebook-square fa-3x"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram fa-3x"></i></a></li>
+            <li><a href="https://www.facebook.com/escenaarteyteatro/"><i class="fab fa-facebook-square fa-3x"></i></a></li>
+            <li><a href="https://instagram.com/escenaarteyteatro?igshid=19bx6ibnhsh22"><i class="fab fa-instagram fa-3x"></i></a></li>
         </ul>
         </div>
     </section>
@@ -118,7 +118,7 @@
 </template>
 
 <script>
-     default {
+     export default {
         props: ['attribute_name', 'errors_form']
     }
 </script>
@@ -136,7 +136,7 @@
           Vue.use(VeeValidate);
         </script>
 <script>
-    default {
+    export default {
         name: "form-component",
         components: {
             FormError
