@@ -161,8 +161,6 @@ ul {
 	min-height: 500px;
 	background: url('https://res.cloudinary.com/dw9docv2h/image/upload/v1586132828/programa_img_bzezbc.jpg') no-repeat;
 	background-size: 1350px 500px;
-	//display: flex;
-//	justify-content: space-around;
 }
 
 .section-programa h1, p {
