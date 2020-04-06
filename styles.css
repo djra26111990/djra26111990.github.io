@@ -67,47 +67,45 @@ ul {
 	padding: 0 20px;
 }
 
+
 /* Section Top */
 .section-top {
-	min-height: 500px;
-	background: url('/img/banner.jpeg') no-repeat;
-	background-size: 1350px 500px;
+	min-height: 467px;
+	background: url('https://res.cloudinary.com/dw9docv2h/image/upload/v1586143787/Banner_P%C3%A1gina_ESCENA-02_vgyps1.jpg') no-repeat;
+	background-size: 1350px 467px;
 	display: flex;
 	justify-content: space-around;
 }
-
-.section-top h1 {
-	font-size: 70px;
-	line-height: 1.3;
-	text-shadow: 2px 2px 2px #9c9c9c;
-    color: white;
-}
-
-.section-top h2 {
-	//font-size: 70px;
-	line-height: 1.3;
-//	text-shadow: 2px 2px 2px #9c9c9c;
-    color: white;
-}
-
-.section-top p {
-//	font-size: 70px;
-	line-height: 1.3;
-//	text-shadow: 2px 2px 2px #9c9c9c;
-    color: white;
-}
-
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+  }
 
 /* Section Play and meet */
 .section-play-meet {
     padding-top: 15px;
 	min-height: 400px;
-	background-color: #fcfc35 ;
-	color: white;
+	background-color: white ;
+	color: black;
+}
+
+.section-play-meet .marco-video {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
 }
 
 .section-play-meet h1 {
-    text-shadow: 2px 2px 2px #9c9c9c;
+	text-shadow: 2px 2px 2px #9c9c9c;
+	margin-right: 50px;
+	margin-top: 30px;
+}
+
+.section-play-meet h3 {
+	margin-right: 50px;
+	margin-top: 20px;
 }
 
 .row {
@@ -126,26 +124,42 @@ ul {
 }
 
 .section-clases {
-    padding-top: 15px;
-	min-height: 400px;
-	background-color: black ;
-	color: white;
+	min-height: 500px;
+	color: black;
+	z-index: 1;
+}
+
+.titulo-clases {
+	background-color: black;
+	width: 1305px;
+	height: 120px;
+	z-index: 2;
+}
+
+.tarjeta {
+	z-index: 3;
+	background-color: grey;
+	min-height: 70px;
 }
 
 .section-clases h1 {
     text-shadow: 2px 2px 2px #9c9c9c;
-    text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: black;
 }
 
 .section-clases h2, i {
     line-height: 1.3;
     margin: auto;
-    padding: auto;
+	padding: auto;
+	
+	font-size: small;
 }
 
 .section-programa {
 	min-height: 500px;
-	background: url('/img/programa_img.jpeg') no-repeat;
+	background: url('https://res.cloudinary.com/dw9docv2h/image/upload/v1586132828/programa_img_bzezbc.jpg') no-repeat;
 	background-size: 1350px 500px;
 	//display: flex;
 //	justify-content: space-around;
@@ -158,30 +172,6 @@ ul {
 .section-programa h1 {
     text-shadow: 2px 2px 2px #9c9c9c;
 }
-
-/* Formulario de contacto 
-p.parrafo-coment {
-    color: green;
-}
-
-textarea {
-  resize: none;
-}
-
-/*Formulario de contacto 
-input:invalid {
-  border: 2px dashed red;
-}
-
-input:invalid:required {
-  background-image: linear-gradient(to right, pink, lightgreen);
-}
-
-input:valid {
-  border: 2px solid black;
-}
-
- Formulario de contacto */
 
 /* Footer */
 .footer {
@@ -202,9 +192,8 @@ input:valid {
 
 /* Mobile */
 @media (max-width: 700px) {
-	.section-top .content,
-	.section-stream .play,
-	.section-stream .content {
+	.section-top,
+	.section-play-meet {
 		position: static;
 		width: 100%;
 	}
@@ -222,17 +211,11 @@ input:valid {
 		font-size: 45px;
 	}
 
-	.section-stream {
+	.section-play-meet {
 		min-height: 400px;
 	}
 
-	.section-stream .play {
-		width: 50%;
-		display: block;
-		margin: 30px auto;
-	}
-
-	.section-grid {
+	.section-play-meet {
 		display: block;
 		margin-top: 0;
 	}
