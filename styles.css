@@ -160,6 +160,10 @@ ul {
 	background-color: var(--secondary--color);
 }
 
+.section-contacto {
+	min-height: 500px;
+}
+
 /* Carrusel */
 .stretch-card>.card {
 	width: 100%;
