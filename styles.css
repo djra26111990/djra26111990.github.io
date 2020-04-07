@@ -158,18 +158,35 @@ ul {
 }
 
 .section-programa {
-	min-height: 500px;
-	background: url('https://res.cloudinary.com/dw9docv2h/image/upload/v1586132828/programa_img_bzezbc.jpg') no-repeat;
-	background-size: 1350px 500px;
+	min-height: 400px;
+	background-color: var(--secondary--color);
 }
 
-.section-programa h1, p {
-    color: white;
+/* Carrusel */
+.stretch-card>.card {
+	width: 100%;
+	min-width: 100%
 }
 
-.section-programa h1 {
-    text-shadow: 2px 2px 2px #9c9c9c;
+.flex {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto
 }
+
+.tarjeta-fondo {
+	background-color: var(--secondary--color);
+}
+
+.titulo-carrusel {
+	color: black;
+	text-shadow: 2px 2px 2px #9c9c9c
+}
+
+/* Carrusel */
+
+
+
 
 /* Footer */
 .footer {
@@ -221,4 +238,32 @@ ul {
 	.footer ul {
 		display: block;
 	}
+}
+
+@media (max-width:767.98px) {
+	.padding {
+		padding: 1rem
+	}
+}
+
+.padding {
+	padding: 3rem
+}
+
+.owl-carousel .item {
+	margin: 3px
+}
+
+.owl-carousel .item img {
+	display: block;
+	width: 100%;
+	height: auto
+}
+
+.owl-carousel .item {
+	margin: 3px
+}
+
+.owl-carousel {
+	margin-bottom: 15px
 }

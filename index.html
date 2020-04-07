@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" rel="stylesheet" />
   <title>Escena compañia de arte y teatro</title>
   </head>
   <body>
@@ -52,61 +53,68 @@
       </div>
     </section>
     <section class="section section-programa">
-      <div>
-        <h1>Programa Continuo</h1>
-        <p>Nam a feugiat nulla, et interdum leo. Ut imperdiet consequat justo, sed ultrices dui ullamcorper eu. Ut fermentum vulputate libero, sed fringilla mi dapibus eu. In hac habitasse platea dictumst.</p>     
-      </div>
+        <div class="page-content page-container" id="page-content">
+            <div class="padding">
+                <div class="row container-fluid">
+                    <div class="col-lg-12 grid-margin stretch-card">
+                        <div class="card tarjeta-fondo">
+                            <div class="card-body">
+                                <div class="row">
+                                    <h1 class="center titulo-carrusel">Nuestros alumnos</h1>
+                                </div>
+                                <div class="owl-carousel">
+                                    <div class="item"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557204140/banner_12.jpg" alt="alumnos" /> </div>
+                                    <div class="item"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557204172/banner_2.jpg" alt="alumnos" /> </div>
+                                    <div class="item"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557204663/park-4174278_640.jpg" alt="alumnos" /> </div>
+                                    <div class="item"> <img src="http://www.urbanui.com/fily/template/images/carousel/banner_2.jpg" alt="alumnos" /> </div>
+                                    <div class="item"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557204172/banner_2.jpg" alt="alumnos" /> </div>
+                                    <div class="item"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1557204663/park-4174278_640.jpg" alt="alumnos" /> </div>
+                                    <div class="item"> <img src="http://www.urbanui.com/fily/template/images/carousel/banner_2.jpg" alt="alumnos" /> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="section section-contacto">
     <h1>Contáctanos</h1>
     <div id="app" style="padding-top: 8rem;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3 form-group">
-                      <template>
-                        <form id="formcontact" method="POST" @submit.prevent="validateBeforeSubmit">
-                        <label>
-                            Nombre:
-                        </label>
-                        <input v-validate="'required'"
-                :class="{'has-errors': errors.has('name')}" name="name" class="form-control" type="text" v-model="from_name">
-                        </input>
-<FormError :attribute_name="'name'" :errors_form="errors"> </FormError>
-                    </div>
-                    <div class="col-sm-6 col-sm-offset-3 form-group">
-                        <label>
-                            Asunto:
-                        </label>
-                        <input class="form-control" type="text" name="subject" v-model="subject" v-validate="'required'"
-                :class="{'has-errors': errors.has('subject')}">
-                       </input>
-<FormError :attribute_name="'subject'" :errors_form="errors"> </FormError>
-                    </div>
-                    <div class="col-sm-6 col-sm-offset-3 form-group">
-                        <label>
-                            Correo:
-                        </label>
-                        <input class="form-control" name="name" type="email" v-model="from_email" v-validate="'required|email'"
-                :class="{'has-errors': errors.has('email')}">
-                        </input>
-<FormError :attribute_name="'email'" :errors_form="errors"> </FormError>
-                    </div>
-                    <div class="col-sm-6 col-sm-offset-3 form-group">
-                        <label>
-                            Mensaje:
-                        </label>
-                        <textarea name="message" class="form-control" v-model="message" v-validate="'required'"
-                :class="{'has-errors': errors.has('message')}">
-                        </textarea>
-<FormError :attribute_name="'message'" :errors_form="errors"> </FormError>
-                    </div>
-                    <div class="col-sm-6 col-sm-offset-3 text-center">
-                        <button name="enviar" class="btn btn-success">
-                            Enviar
-                        </button>
-                        </form>
-                        </template>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 form-group">
+                    <label>
+                        Nombre:
+                    </label>
+                    <input class="form-control" type="text" v-model="from_name">
+                    </input>
+                </div>
+                <div class="col-sm-6 col-sm-offset-3 form-group">
+                    <label>
+                        Asunto:
+                    </label>
+                    <input class="form-control" type="text" v-model="subject">
+                    </input>
+                </div>
+                <div class="col-sm-6 col-sm-offset-3 form-group">
+                    <label>
+                        Correo:
+                    </label>
+                    <input class="form-control" type="email" v-model="from_email">
+                    </input>
+                </div>
+                <div class="col-sm-6 col-sm-offset-3 form-group">
+                    <label>
+                        Mensaje:
+                    </label>
+                    <textarea class="form-control" v-model="message">
+                    </textarea>
+                </div>
+                <div class="col-sm-6 col-sm-offset-3 text-center">
+                    <button class="btn btn-success">
+                        Enviar
+                    </button>
                 </div>
             </div>
         </div>
@@ -120,18 +128,11 @@
         </ul>
         </div>
     </section>
-<template>
-    <span v-show="errors_form.has(attribute_name)" class="help brand-color">{{ errors_form.first(attribute_name) }}</span>
-</template>
-
-<script>
-     export default {
-        props: ['attribute_name', 'errors_form']
-    }
-</script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js" integrity="sha256-ngFW3UnAN0Tnm76mDuu7uUtYEcG3G5H1+zioJw3t+68=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/vee-validate@<3.0.0/dist/vee-validate.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha256-+xf9aJnHocnmrigq2hIDJGBSAnJdF5NH+Ooe5J2PHiI=" crossorigin="anonymous"></script>
     <script>
         //iniciamos rellax
@@ -139,37 +140,6 @@
     </script>
         <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript">
         </script>
-        <script>
-          Vue.use(VeeValidate);
-        </script>
-<script>
-    export default {
-        name: "form-component",
-        components: {
-            FormError
-        },
-        data () {
-            return {
-                firstname: null,
-                lastname: null,
-                email: null,
-                password: null,
-                password_confirmation: null
-            }
-        },
-        methods: {
-            validateBeforeSubmit: function() {
-                this.$validator.validateAll().then((result) => {
-                    if (result) {
-                        alert('From Submitted!');
-                        return;
-                    }
-                    //errores
-                });
-            }
-        }
-    }
-</script>
         <script>
             (function(){
                 emailjs.init("user_dyP5KRs4t0ZT4EAxKWqtz");
@@ -206,6 +176,33 @@
                     }
                 }
             });
+        </script>
+        <script>
+            $(document).ready(function() {
+
+$(".owl-carousel").owlCarousel({
+
+autoPlay: 3000,
+items : 4,
+itemsDesktop : [1199,3],
+itemsDesktopSmall : [979,3],
+center: true,
+nav:true,
+loop:true,
+responsive: {
+600: {
+items: 4
+}
+}
+
+
+
+
+
+
+});
+
+});
         </script>
   </body>
 </html>
