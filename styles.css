@@ -162,6 +162,21 @@ ul {
 
 .section-contacto {
 	min-height: 500px;
+	background-color: black;
+	color: white;
+}
+
+.contacto {
+width: 200px;
+margin-left: 50px;
+padding-top: 90px;
+justify-content: space-around;
+}
+
+.contacto-form {
+	width: 450px;
+	margin-left: 100px;
+	padding-top: 90px;
 }
 
 /* Carrusel */
