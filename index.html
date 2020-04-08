@@ -124,7 +124,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-7 col-sm-offset-3 text-center p-2">
-                                <button class="btn btn-warning">
+                                <button @click="enviar" class="btn btn-warning">
                                     Enviar
                                 </button>
                             </div> 
@@ -175,7 +175,7 @@
             var forms = document.getElementsByClassName('needs-validation');
             // Se realiza loop sobre ellos y se previene el submit
             var validation = Array.prototype.filter.call(forms, function(form) {
-              form.addEventListener('submit', function(event) {
+              form.addEventListener('click', function(event) {
                 if (form.checkValidity() === false) {
                   event.preventDefault();
                   event.stopPropagation();
@@ -214,7 +214,16 @@
                             message: this.message,
                             subject: this.subject,
                         };
-                        
+                        window.addEventListener('load', function() {
+            // Se hace fetch a todos los formularios que querramos aplicar los estilos personalizados de Bootstrap
+            var forms = document.getElementsByClassName('needs-validation');
+            // Se realiza loop sobre ellos y se previene el submit
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('click', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
                         emailjs.send("daniel_rivas","form_contact", data)
                         .then(function(response) {
                             if(response.text === 'OK'){
@@ -225,6 +234,9 @@
                             alert('Ocurrió un problema al enviar el correo');
                            console.log("FAILED. error=", err);
                         });
+                    }, false);
+            });
+          }, false);
                     }
                 }
             });
