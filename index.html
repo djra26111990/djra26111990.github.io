@@ -83,7 +83,7 @@
                 <form class="needs-validation" novalidate>
                     <div class="d-inline-flex flex-row">
                         <div class="flex-column contacto-form">
-                            <div class="col-md-6 col-sm-offset-3 form-group p-2">
+                            <div class="col-sm-7 col-sm-offset-3 form-group p-2">
                                 <label>
                                     Nombre:
                                 </label>
@@ -93,7 +93,7 @@
                                     Por favor rellene el campo Nombre.
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-offset-3 form-group p-2">
+                            <div class="col-sm-7 col-sm-offset-3 form-group p-2">
                                 <label>
                                     Asunto:
                                 </label>
@@ -103,7 +103,7 @@
                                     Por favor rellene el campo Asunto.
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-offset-3 form-group p-2">
+                            <div class="col-sm-7 col-sm-offset-3 form-group p-2">
                                 <label>
                                     Correo:
                                 </label>
@@ -113,7 +113,7 @@
                                     Por favor introduzca un correo valido.
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-offset-3 form-group p-2">
+                            <div class="col-sm-7 col-sm-offset-3 form-group p-2">
                                 <label>
                                     Mensaje:
                                 </label>
@@ -123,7 +123,7 @@
                                     Por favor rellene el campo mensaje.
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-offset-3 text-center p-2">
+                            <div class="col-sm-7 col-sm-offset-3 text-center p-2">
                                 <button class="btn btn-warning">
                                     Enviar
                                 </button>
@@ -141,12 +141,24 @@
         
     </section>
     <section class="section footer">
-        <div class="div-footer">
-        <h1>Síguenos: </h1>
-        <ul>
-            <li><a href="https://www.facebook.com/escenaarteyteatro/"><i class="fab fa-facebook-square fa-3x"></i></a></li>
-            <li><a href="https://instagram.com/escenaarteyteatro?igshid=19bx6ibnhsh22"><i class="fab fa-instagram fa-3x"></i></a></li>
-        </ul>
+        <div class="row">
+            <div class="columns">
+                <h1>Síguenos: </h1>
+                <ul>
+                    <li><a href="https://www.facebook.com/escenaarteyteatro/" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=593959934473&text=&source=&data=&app_absent=" target="_blank"><i class="fab fa-whatsapp fa-3x"></i></a></li>
+                    <li><a href="https://instagram.com/escenaarteyteatro?igshid=19bx6ibnhsh22" target="_blank"><i class="fab fa-instagram fa-3x"></i></a></li>
+                </ul>
+            </div>
+            <div class="columns">
+                <img class="center" src="https://res.cloudinary.com/dw9docv2h/image/upload/v1586132865/Logo_escena_FINAL_negro_hablsj.png" height="90" width="150" alt="Logo de escena">
+            </div>
+            <div class="columns">
+                <h3>Dirección</h3>
+                <h5 style="text-align: justify">
+                    Donec id lorem a justo ultricies malesuada. Aenean commodo sit amet metus gravida molestie.
+                </h5>
+            </div>
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -156,13 +168,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js" integrity="sha256-ngFW3UnAN0Tnm76mDuu7uUtYEcG3G5H1+zioJw3t+68=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha256-+xf9aJnHocnmrigq2hIDJGBSAnJdF5NH+Ooe5J2PHiI=" crossorigin="anonymous"></script>
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function() {
           'use strict';
           window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            // Se hace fetch a todos los formularios que querramos aplicar los estilos personalizados de Bootstrap
             var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
+            // Se realiza loop sobre ellos y se previene el submit
             var validation = Array.prototype.filter.call(forms, function(form) {
               form.addEventListener('submit', function(event) {
                 if (form.checkValidity() === false) {

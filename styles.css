@@ -161,22 +161,21 @@ ul {
 }
 
 .section-contacto {
-	min-height: 500px;
+	min-height: 700px;
 	background-color: black;
 	color: white;
+	padding-top: 50px;
 }
 
 .contacto {
 width: 200px;
 margin-left: 50px;
-padding-top: 90px;
 justify-content: space-around;
 }
 
 .contacto-form {
 	width: 450px;
-	margin-left: 100px;
-	padding-top: 90px;
+	margin-left: 70px;
 }
 
 /* Carrusel */
@@ -210,9 +209,10 @@ justify-content: space-around;
     color: white;
 	border-top: var(--text-color) 1px solid;
 	padding: 30px;
-	margin-top: 20px;
 	text-align: center;
-	background: var(--tertiary--color);
+	background: grey;
+	border: 0;
+
 }
 
 .footer ul {
