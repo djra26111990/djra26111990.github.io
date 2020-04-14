@@ -209,16 +209,16 @@ VeeValidate.Validator.extend('prohibirPalabras', {
 			this.$validator.validate()
 				.then(esValido => {
 					if (esValido) {
-emailjs.send("daniel_rivas","form_contact", data)
+                        emailjs.send("daniel_rivas","form_contact", data)
                         .then(function(response) {
                             if(response.text === 'OK'){
                                 alert('El correo se ha enviado de forma exitosa');
                             }
-     document.getElementById("nombre").value = "";
-     document.getElementById("correo").value = "";
-     document.getElementById("asunto").value = "";
-     document.getElementById("mensaje").value = "";
                            console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                           document.getElementById("nombre").value = "";
+                           document.getElementById("correo").value = "";
+                           document.getElementById("asunto").value = "";
+                           document.getElementById("mensaje").value = "";
                         }, function(err) {
                             alert('Ocurrió un problema al enviar el correo');
                            console.log("FAILED. error=", err);
