@@ -82,25 +82,25 @@
         <div class="row" id="app">
             <div class="col-12">
                 <div class="form-group">
-                    <input name="nombre" autocomplete="off" class="form-control" v-validate="'required'" v-model="from_name" type="text" placeholder="Nombre completo" />
+                    <input id="nombre" name="nombre" autocomplete="off" class="form-control" v-validate="'required'" v-model="from_name" type="text" placeholder="Nombre completo" />
                     <div class="invalid-feedback">
                         {{errors.first('nombre')}}
                     </div>
                 </div>
                 <div class="form-group">
-                    <input name="asunto" autocomplete="off" class="form-control" v-validate="'required'" v-model="subject" type="text" placeholder="Asunto" />
+                    <input id="asunto" name="asunto" autocomplete="off" class="form-control" v-validate="'required'" v-model="subject" type="text" placeholder="Asunto" />
                     <div class="invalid-feedback">
                         {{errors.first('asunto')}}
                     </div>
                 </div>
                 <div class="form-group">
-                    <input name="correo" autocomplete="off" class="form-control" v-validate="'required|email'" v-model="from_email" type="email" placeholder="Correo electrónico" />
+                    <input id="correo" name="correo" autocomplete="off" class="form-control" v-validate="'required|email'" v-model="from_email" type="email" placeholder="Correo electrónico" />
                     <div class="invalid-feedback">
                         {{errors.first('correo')}}
                     </div>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" v-validate="'required|prohibirPalabras:mierda,malditos,maldita'" placeholder="Mensaje" v-model="message" name="mensaje" cols="20" rows="5"></textarea>
+                    <textarea id="mensaje" class="form-control" v-validate="'required|prohibirPalabras:mierda,malditos,maldita'" placeholder="Mensaje" v-model="message" name="mensaje" cols="20" rows="5"></textarea>
                     <div class="invalid-feedback">
                         {{errors.first('mensaje')}}
                     </div>
@@ -214,6 +214,10 @@ emailjs.send("daniel_rivas","form_contact", data)
                             if(response.text === 'OK'){
                                 alert('El correo se ha enviado de forma exitosa');
                             }
+     document.getElementById("nombre").value = "";
+     document.getElementById("correo").value = "";
+     document.getElementById("asunto").value = "";
+     document.getElementById("mensaje").value = "";
                            console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
                         }, function(err) {
                             alert('Ocurrió un problema al enviar el correo');
