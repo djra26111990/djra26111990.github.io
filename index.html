@@ -235,37 +235,41 @@ VeeValidate.Validator.extend('prohibirPalabras', {
                     }
                 },
 	methods: {
-		intentarEnviar() {
-         let data = {
-                            from_name: this.from_name,
-                            from_email: this.from_email,
-                            message: this.message,
-                            subject: this.subject,
-                        };
-		  
-			this.$validator.validate()
-				.then(esValido => {
-					if (esValido) {
-                        emailjs.send("daniel_rivas","form_contact", data)
-                        .then(function(response) {
-                            if(response.text === 'OK'){
-                                alert('El correo se ha enviado de forma exitosa');
+                async intentarEnviar() {
+                    let data = {
+                        from_name: this.from_name,
+                        from_email: this.from_email,
+                        message: this.message,
+                        subject: this.subject,
+                    };
+
+                    let isValidForm = await this.$validator.validate().then(esValido => esValido);
+                    if (isValidForm) this.enviarMail(data);
+                },
+                async enviarMail(item) {
+                    let proceso = await emailjs.send("daniel_rivas", "form_contact", item)
+                        .then(function (response) {
+                            if (response.text === 'OK') {
+                                alert('El comentario se ha enviado de forma exitosa');
                             }
-                           console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-                           document.getElementById("nombre").value = null;
-                           document.getElementById("correo").value = null;
-                           document.getElementById("asunto").value = null;
-                           document.getElementById("mensaje").value = null;
-                        }, function(err) {
-                            alert('Ocurrió un problema al enviar el correo');
-                           console.log("FAILED. error=", err);
+                            console.log(`SUCCES STATUS:${response.status} TEXT:${response.status}`)
+                            return true;
+                        }, function (err) {
+                            alert('Ocurrió un problema al enviar el comentario');
+                            console.log("FAILED. error=", err);
+                            return false;
                         });
-					} else {
-						//sin mensaje
-					}
-				});
-		}
-	}
+
+                    if (isSended) await this.limpiar();
+                },
+                async limpiar() {
+                    await this.$validator.reset(); 
+                    this.from_name = null;
+                    this.from_email = null;
+                    this.message = null;
+                    this.subject = null;
+                }
+            }
 });
         </script>
         <script>
