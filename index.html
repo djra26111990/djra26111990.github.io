@@ -247,7 +247,7 @@ VeeValidate.Validator.extend('prohibirPalabras', {
                     if (isValidForm) this.enviarMail(data);
                 },
                 async enviarMail(item) {
-                    let proceso = await emailjs.send("daniel_rivas", "form_contact", item)
+                    let sendEmail = await emailjs.send("daniel_rivas", "form_contact", item)
                         .then(function (response) {
                             if (response.text === 'OK') {
                                 alert('El comentario se ha enviado de forma exitosa');
@@ -260,7 +260,7 @@ VeeValidate.Validator.extend('prohibirPalabras', {
                             return false;
                         });
 
-                    if (isSended) await this.limpiar();
+                    if (sendEmail) await this.limpiar();
                 },
                 async limpiar() {
                     await this.$validator.reset(); 
