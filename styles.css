@@ -72,7 +72,7 @@ ul {
 .section-top {
 	min-height: 467px;
 	background: url('https://res.cloudinary.com/dw9docv2h/image/upload/v1586143787/Banner_P%C3%A1gina_ESCENA-02_vgyps1.jpg') no-repeat;
-	background-size: 1900px 467px;
+	background-size: 1350px 467px;
 	display: flex;
 	justify-content: space-around;
 }
@@ -125,18 +125,17 @@ ul {
 .section-clases {
 	min-height: 200px;
 	color: black;
-	z-index: 1;
 }
 
 .titulo-clases {
 	background-color: black;
-	z-index: 2;
 }
 
 .tarjeta {
-	z-index: 3;
 	background-color: grey;
 	min-height: 70px;
+	margin-top: -80px;
+	margin-left: 40px;
 }
 
 .section-clases h1 {
@@ -154,6 +153,21 @@ ul {
 	
 	font-size: small;
 }
+
+.sectionone {
+	position: relative;
+	z-index: 10;
+  }
+
+.sectiontwo {
+	position: relative;
+	z-index: 20;
+  }
+
+ .sectionthree {
+	position: relative;
+	z-index: 30;
+  }
 
 .section-programa {
 	min-height: 400px;
