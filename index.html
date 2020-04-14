@@ -252,7 +252,7 @@ VeeValidate.Validator.extend('prohibirPalabras', {
                             if (response.text === 'OK') {
                                 alert('El comentario se ha enviado de forma exitosa');
                             }
-                            console.log(`SUCCES STATUS:${response.status} TEXT:${response.status}`)
+                            console.log(`SUCCESS STATUS:${response.status} TEXT:${response.status}`)
                             return true;
                         }, function (err) {
                             alert('Ocurrió un problema al enviar el comentario');
