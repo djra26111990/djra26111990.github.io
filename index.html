@@ -35,23 +35,23 @@
     </section>
     <section class="row sectiontwo">
         <div class="columns tarjeta card">
-            <h2>Online</h2>
-            <i class="fas fa-child fa-3x"></i>
-            <p>Donec id lorem a justo ultricies malesuada. Aenean commodo sit amet metus gravida molestie. Cras nec nulla rhoncus, lacinia leo at, hendrerit odio.</p>
+            <h2 class="center titulo-tarjeta">Online</h2>
+            <i class="fas fa-at fa-3x"></i>
+            <p class="parrafos-tarjetas">Donec id lorem a justo ultricies malesuada. Aenean commodo sit amet metus gravida molestie. Cras nec nulla rhoncus, lacinia leo at, hendrerit odio.</p>
           </div>
           <div class="columns tarjeta card">
-            <h2>Talleres</h2>
-            <i class="fas fa-user fa-3x"></i>
-            <p>Donec id lorem a justo ultricies malesuada. Aenean commodo sit amet metus gravida molestie. Cras nec nulla rhoncus, lacinia leo at, hendrerit odio.</p>
+            <h2 class="center titulo-tarjeta">Talleres</h2>
+            <i class="fas fa-users fa-3x"></i>
+            <p class="parrafos-tarjetas">Donec id lorem a justo ultricies malesuada. Aenean commodo sit amet metus gravida molestie. Cras nec nulla rhoncus, lacinia leo at, hendrerit odio.</p>
           </div>
           <div class="columns tarjeta card">
-            <h2>Continuo</h2>
+            <h2 class="center titulo-tarjeta">Continuo</h2>
             <i class="fas fa-child fa-3x"></i>
-            <p>Donec id lorem a justo ultricies malesuada. Aenean commodo sit amet metus gravida molestie. Cras nec nulla rhoncus, lacinia leo at, hendrerit odio.</p>
+            <p class="parrafos-tarjetas">Donec id lorem a justo ultricies malesuada. Aenean commodo sit amet metus gravida molestie. Cras nec nulla rhoncus, lacinia leo at, hendrerit odio.</p>
           </div>
     </section>
     <section class="row sectionthree">
-        <p>Aenean commodo sit amet metus gravida molestie. Cras nec nulla rhoncus, lacinia leo at, hendrerit odio.</p>
+        <p class="center parrafo-bajo-tarjeta">Aenean commodo sit amet metus gravida molestie. Cras nec nulla rhoncus, lacinia leo at, hendrerit odio.</p>
     </section>
     <section class="section section-programa">
         <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
@@ -113,7 +113,7 @@
         </div>
     </section>
     <section class="section section-contacto">
-        <div class="row" id="app">
+        <div class="row container-fluid contacto-form" id="app">
             <div class="col-sm-4 d-flex flex-column">
                 <div class="form-group">
                     <input id="nombre" name="nombre" autocomplete="off" class="form-control" v-validate="'required'" v-model="from_name" type="text" placeholder="Nombre completo" />
@@ -134,7 +134,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <textarea id="mensaje" class="form-control" v-validate="'required|prohibirPalabras:mierda,malditos,maldita'" placeholder="Mensaje" v-model="message" name="mensaje" cols="20" rows="5"></textarea>
+                    <textarea id="mensaje" class="form-control" v-validate="'required|prohibirPalabras:mierda,malditos,maldita,puta,matar,coño'" placeholder="Mensaje" v-model="message" name="mensaje" cols="20" rows="5"></textarea>
                     <div class="invalid-feedback">
                         {{errors.first('mensaje')}}
                     </div>
@@ -147,14 +147,12 @@
                 <button class="btn btn-success mb-5" @click="intentarEnviar">Enviar</button>
             </div>
             <div class="flex-column contacto">
-                <h1 class="center">Contáctanos</h1>
-                   <h4>
-                    Si tienes algo que decirnos, ¡nos encantaría leerte!.
-                           </h4>
-                       </div>
-                   </div>
-           </div>
-        </div>     
+                <h1 class="center contactanos-titulo">Contáctanos</h1>
+                   <h4 style="text-align: center;">
+                      Si tienes algo que decirnos, ¡nos encantaría leerte!.
+                   </h4>
+            </div>
+        </div>  
     </section>
     <section class="section footer">
         <div class="row">
@@ -177,6 +175,11 @@
                 </h5>
             </div>
         </div>
+        <div class="row">
+            <h6 class="center">
+                Copyright<i class="far fa-copyright"></i> ESCENA Compañía de arte y teatro. 2020.
+            </h6>
+        </div>
     </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -190,90 +193,85 @@
         //iniciamos rellax
         var rellax = new Rellax('.rellax');
     </script>
-        <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript">
-        </script>
-    <script src="https://unpkg.com/vee-validate@2.2.9/dist/vee-validate.js">
-    </script>
-    <script src="https://unpkg.com/vee-validate@2.2.9/dist/locale/es.js">
-    </script>
-        <script>
-  (function(){
-                emailjs.init("user_dyP5KRs4t0ZT4EAxKWqtz");
-             })();
-    
-  Vue.use(VeeValidate, {
-	classes: true,// Sí queremos que ponga clases automáticamente
-	// Indicar qué clase poner al input en caso de que sea
-	// válido o inválido. Usamos Bootstrap 4
-	classNames: {
-		valid: "is-valid",
-		invalid: "is-invalid",
-	},
-	// Podría ser blur, change, etcétera. Si está vacío
-	// entonces se tiene que validar manualmente
-	events: "change|blur|keyup",
-});
-VeeValidate.Validator.localize("es");
-VeeValidate.Validator.extend('prohibirPalabras', {
-	getMessage: (campo, argumentos) => {
-		// argumentos es un arreglo
-		return "El campo " + campo + " no puede contener las siguientes palabras: " + argumentos.join(" ");
-	},
-	validate: (valor, argumentos) => {
-		return argumentos.every(argumento => !valor.includes(argumento))
-	},
-})
+    <script src="https://cdn.emailjs.com/dist/email.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/vee-validate@2.2.9/dist/vee-validate.js"></script>
+    <script src="https://unpkg.com/vee-validate@2.2.9/dist/locale/es.js"></script>
+    <script>
+    (function(){
+        emailjs.init("user_dyP5KRs4t0ZT4EAxKWqtz");
+    })();
+        
+    Vue.use(VeeValidate, {
+        classes: true,// Sí queremos que ponga clases automáticamente
+        // Indicar qué clase poner al input en caso de que sea
+        // válido o inválido. Usamos Bootstrap 4
+        classNames: {
+            valid: "is-valid",
+            invalid: "is-invalid",
+        },
+        // Podría ser blur, change, etcétera. Si está vacío
+        // entonces se tiene que validar manualmente
+        events: "change|blur|keyup",
+    });
+    VeeValidate.Validator.localize("es");
+    VeeValidate.Validator.extend('prohibirPalabras', {
+        getMessage: (campo, argumentos) => {
+            // argumentos es un arreglo
+            // return "El campo " + campo + " no puede contener las siguientes palabras: " + argumentos.join(" ");
+            return "El campo " + campo + " no puede contener groserias, insultos o improperios.";
+        },
+        validate: (valor, argumentos) => {
+            return argumentos.every(argumento => !valor.includes(argumento))
+        },
+    })
 
-  new Vue({
-                el: '#app',
-                data(){
-                    return {
-                        from_name: '',
-                        from_email: '',
-                        message: '',
-                        subject: '',
+    new Vue({
+                    el: '#app',
+                    data(){
+                        return {
+                            from_name: '',
+                            from_email: '',
+                            message: '',
+                            subject: '',
+                        }
+                    },
+        methods: {
+                    async intentarEnviar() {
+                        let data = {
+                            from_name: this.from_name,
+                            from_email: this.from_email,
+                            message: this.message,
+                            subject: this.subject,
+                        };
+
+                        let isValidForm = await this.$validator.validate().then(esValido => esValido);
+                        if (isValidForm) this.enviarMail(data);
+                    },
+                    async enviarMail(item) {
+                        let sendEmail = await emailjs.send("daniel_rivas", "form_contact", item)
+                            .then(function (response) {
+                                if (response.text === 'OK') {
+                                    alert('El comentario se ha enviado de forma exitosa');
+                                }
+                                console.log(`SUCCESS STATUS:${response.status} TEXT:${response.status}`)
+                                return true;
+                            }, function (err) {
+                                alert('Ocurrió un problema al enviar el comentario');
+                                console.log("FAILED. error=", err);
+                                return false;
+                            });
+
+                        if (sendEmail) await this.limpiar();
+                    },
+                    async limpiar() {
+                        await this.$validator.reset(); 
+                        this.from_name = null;
+                        this.from_email = null;
+                        this.message = null;
+                        this.subject = null;
                     }
-                },
-	methods: {
-                async intentarEnviar() {
-                    let data = {
-                        from_name: this.from_name,
-                        from_email: this.from_email,
-                        message: this.message,
-                        subject: this.subject,
-                    };
-
-                    let isValidForm = await this.$validator.validate().then(esValido => esValido);
-                    if (isValidForm) this.enviarMail(data);
-                },
-                async enviarMail(item) {
-                    let sendEmail = await emailjs.send("daniel_rivas", "form_contact", item)
-                        .then(function (response) {
-                            if (response.text === 'OK') {
-                                alert('El comentario se ha enviado de forma exitosa');
-                            }
-                            console.log(`SUCCESS STATUS:${response.status} TEXT:${response.status}`)
-                            return true;
-                        }, function (err) {
-                            alert('Ocurrió un problema al enviar el comentario');
-                            console.log("FAILED. error=", err);
-                            return false;
-                        });
-
-                    if (sendEmail) await this.limpiar();
-                },
-                async limpiar() {
-                    await this.$validator.reset(); 
-                    this.from_name = null;
-                    this.from_email = null;
-                    this.message = null;
-                    this.subject = null;
                 }
-            }
-});
-        </script>
-        <script>
- 
-        </script>
+    });
+    </script>
   </body>
 </html>
