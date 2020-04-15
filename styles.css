@@ -453,7 +453,7 @@ justify-content: space-around;
 @media (max-width: 375px) {
  .carousel-inner {
   	width: 375px;
-	  margin-left: -20px;
+	  
   }
   
 }
