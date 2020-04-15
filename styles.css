@@ -80,8 +80,7 @@ ul {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	
-  }
+}
 
 /* Section Play and meet */
 .section-play-meet {
@@ -121,6 +120,14 @@ ul {
   flex: 1;
   margin: 15px;
 }
+
+.columns-tarjeta {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+	margin: 15px;
+ }
 
 .section-clases {
 	min-height: 200px;
@@ -220,6 +227,11 @@ justify-content: space-around;
     display: block;
 }
 
+.carousel-inner {
+	width: 1366px;
+	margin-left: -20px;
+}
+
 
 .carousel-thumbnails .carousel-indicators li {
     height: auto;
@@ -253,7 +265,7 @@ justify-content: space-around;
 }
 
 /* Mobile */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 	.section-top,
 	.section-play-meet {
 		position: static;
@@ -264,17 +276,45 @@ justify-content: space-around;
 		min-height: 200px;
 		padding-top: 20px;
 		text-align: center;
-		background-size: 700px 200px;
+		background-size: 768px 200px;
 	}
 
-	.section-top h1 {
-		font-size: 45px;
+	.img-center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.parrafo-bajo-tarjeta {
+		margin-top: 20px;
+		margin-bottom: 30px;
+		margin-left: 50px;
+		font-size: 0.8rem;
 	}
 
 	.section-play-meet {
 		min-height: 400px;
 		display: block;
 		margin-top: 0;
+	}
+
+	.columns-tarjeta {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+		flex: 1;
+		margin: 15px;
+	 }
+
+	 .tarjeta {
+		 margin-top: -80px;
+		 margin-left: 40px;
+	 }
+
+	 .parrafos-tarjetas {
+		margin: 30px 30px 30px 30px;
+		text-align: justify;
+		font-size: 0.80rem;
 	}
 
 	.section-play-meet h1 {
@@ -296,7 +336,117 @@ justify-content: space-around;
 		width: 220px;
 	}
 
+	.section-clases h1 {
+		font-size: rem;
+	}
+
+	.section-programa {
+		min-height: 200px;
+		background-color: var(--secondary--color);
+	}
+
 	.footer ul {
 		display: block;
 	}
+}
+
+@media (max-width: 425px){
+	.section-top,
+	.section-play-meet {
+		position: static;
+		width: 100%;
+	}
+
+	.section-top {
+		min-height: 200px;
+		padding-top: 20px;
+		text-align: center;
+		background-size: 425px 200px;
+	}
+
+	.section-play-meet .marco-video {
+		height: 150px;
+		width: 220px;
+		margin-right: auto;
+		margin-left: 90px;
+	}
+
+	.section-play-meet h1 {
+		margin-left: 90px;
+		margin-right: auto;
+	}
+
+	.section-play-meet h3 {
+		margin-left: 30px;
+		margin-right: auto;
+	}
+
+	.img-center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.parrafo-bajo-tarjeta {
+		margin-top: -70px;
+		margin-bottom: 30px;
+		margin-left: 40px;
+		font-size: 0.9rem;
+	}
+
+	.tarjeta {
+		font-size: 0.9rem;
+		margin-bottom: 100px;
+	}
+
+	.titulo-tarjeta {
+		font-size: 1.7rem;
+	}
+
+	.columns-tarjeta {
+		flex: unset;
+	}
+
+	.section-programa {
+		min-height: 190px;
+	}
+
+	.contact {
+		margin-left: 20px;
+	}
+
+	.contactanos-titulo {
+		margin-left: 30px;
+	}
+
+	.contacto p {
+		margin-left: 80px;
+		margin-right: 20px;
+		font-size: 1.2rem;
+		margin-bottom: 30px;
+		min-width: 100px;
+		text-align: center;
+	}
+
+	.carousel-inner {
+		width: 425px;
+		margin-left: -20px;
+	}
+
+	.footer h1 {
+		margin-left: 20px;
+	}
+
+	.footer img h3>h5 {
+		margin-left: 20px;
+	}
+
+	.footer .rrss {
+		margin-left: 10px;
+	}
+
+	.footer h6 {
+		margin-left: 30px;
+	}
+
 }
