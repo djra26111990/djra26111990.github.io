@@ -135,7 +135,23 @@ ul {
 	background-color: grey;
 	min-height: 70px;
 	margin-top: -80px;
-	margin-left: 40px;
+	margin-left: 90px;
+	margin-right: 60px
+}
+
+.titulo-tarjeta {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.parrafos-tarjetas{
+	margin: 30px 30px 30px 30px;
+	text-align: justify;
+}
+
+.parrafo-bajo-tarjeta{
+	margin-top: 20px;
+	margin-bottom: 30px;	
 }
 
 .section-clases h1 {
@@ -187,9 +203,13 @@ margin-left: 50px;
 justify-content: space-around;
 }
 
+.contactanos-titulo {
+	font-size: 2rem;
+	text-align: center;
+}
+
 .contacto-form {
-	width: 450px;
-	margin-left: 70px;
+	padding-left: 30px;
 }
 
 /* Carrusel */
@@ -279,32 +299,4 @@ justify-content: space-around;
 	.footer ul {
 		display: block;
 	}
-}
-
-@media (max-width:767.98px) {
-	.padding {
-		padding: 1rem
-	}
-}
-
-.padding {
-	padding: 3rem
-}
-
-.owl-carousel .item {
-	margin: 3px
-}
-
-.owl-carousel .item img {
-	display: block;
-	width: 100%;
-	height: auto
-}
-
-.owl-carousel .item {
-	margin: 3px
-}
-
-.owl-carousel {
-	margin-bottom: 15px
 }
