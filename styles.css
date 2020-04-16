@@ -232,6 +232,12 @@ justify-content: space-around;
 	margin-left: -20px;
 }
 
+.carousel-inner>.item {
+    -webkit-transition: -webkit-transform 0.1s ease-in-out !important;
+    -o-transition: -o-transform 0.1s ease-in-out !important;
+    transition: transform 0.1s ease-in-out !important;
+}
+
 
 .carousel-thumbnails .carousel-indicators li {
     height: auto;
