@@ -310,6 +310,16 @@ justify-content: space-around;
 	}
 }
 
+@media (max-width: 980px) {
+	.carousel-inner {
+		width: 980px;
+	}
+
+	.parrafos-tarjetas {
+		font-size: 0.84rem;
+	}
+}
+
 @media (max-width: 768px) {
 	.section-top,
 	.section-play-meet {
@@ -574,3 +584,4 @@ justify-content: space-around;
 		margin-left: 70px;
 	}
 }
+
