@@ -13,7 +13,7 @@
     <section class="section">
         <div class="columns">
           <div class="logo-cinta row">
-            <img class="center img-center" src="https://res.cloudinary.com/dw9docv2h/image/upload/v1586132865/Logo_escena_FINAL_negro_hablsj.png" height="90" width="150" alt="Logo de escena">
+            <img class="center img-center" src="https://res.cloudinary.com/dw9docv2h/image/upload/v1587604752/logo_P%C3%A1gina_ESCENA-05_yd1p4l.png" height="81" width="151" alt="Logo de escena">
           </div>
         </div>
       </section>
@@ -118,27 +118,15 @@
             <div class="col-sm-4 d-flex flex-column contact">
                 <div class="form-group">
                     <input id="nombre" name="nombre" autocomplete="off" class="form-control" v-validate="'required'" v-model="from_name" type="text" placeholder="Nombre completo" />
-                    <div class="invalid-feedback">
-                        {{errors.first('nombre')}}
-                    </div>
                 </div>
                 <div class="form-group">
                     <input id="asunto" name="asunto" autocomplete="off" class="form-control" v-validate="'required'" v-model="subject" type="text" placeholder="Asunto" />
-                    <div class="invalid-feedback">
-                        {{errors.first('asunto')}}
-                    </div>
                 </div>
                 <div class="form-group">
                     <input id="correo" name="correo" autocomplete="off" class="form-control" v-validate="'required|email'" v-model="from_email" type="email" placeholder="Correo electrónico" />
-                    <div class="invalid-feedback">
-                        {{errors.first('correo')}}
-                    </div>
                 </div>
                 <div class="form-group">
                     <textarea id="mensaje" class="form-control" v-validate="'required|prohibirPalabras:mierda,malditos,maldita,puta,matar,coño,chupar,chupalo,mamalo,mamar'" placeholder="Mensaje" v-model="message" name="mensaje" cols="20" rows="5"></textarea>
-                    <div class="invalid-feedback">
-                        {{errors.first('mensaje')}}
-                    </div>
                 </div>
                 <div v-show="errors.all().length" class="alert alert-danger">
                     <ul>
@@ -158,7 +146,7 @@
     <section class="section footer">
         <div class="row">
             <div class="columns">
-                <h1>Síguenos: </h1>
+                <h3>Síguenos: </h3>
                 <ul>
                     <li><a href="https://www.facebook.com/escenaarteyteatro/" target="_blank"><i class="rrss fab fa-facebook-square fa-3x"></i></a></li>
                     <li><a href="https://api.whatsapp.com/send?phone=593959934473&text=&source=&data=&app_absent=" target="_blank"><i class="rrss fab fa-whatsapp fa-3x"></i></a></li>
@@ -166,7 +154,7 @@
                 </ul>
             </div>
             <div class="columns">
-                <img class="center" src="https://res.cloudinary.com/dw9docv2h/image/upload/v1586132865/Logo_escena_FINAL_negro_hablsj.png" height="90" width="150" alt="Logo de escena">
+                <img class="center img-center" src="https://res.cloudinary.com/dw9docv2h/image/upload/v1587604752/logo_P%C3%A1gina_ESCENA-05_yd1p4l.png" height="81" width="151" alt="Logo de escena">
             </div>
             <div class="columns">
                 <h3>Dirección</h3>
