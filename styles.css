@@ -152,11 +152,50 @@ ul {
 
 .tarjeta {
 	background-color: grey;
-	min-height: 70px;
 	margin-top: -80px;
 	margin-left: 90px;
-	margin-right: 60px
+	margin-right: 60px;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	transform-style: preserve-3d;
+	transition: all 0.8s ease;
 }
+
+.tarjeta:hover {
+	transform: rotateY(180deg);
+}
+
+.tarjeta-frente{
+	position: absolute;
+  top: 0;
+  left: 0;
+  width: 305.33px;
+  height: 350px;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: grey;
+  color: black;
+  }
+
+  .tarjeta-back{
+	position: absolute;
+  top: 0;
+  left: 0;
+  width: 305.33px;
+  height: 350px;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: grey;
+  color: white;
+  text-align: center;
+  transform: rotateY(180deg);
+  }
 
 .titulo-tarjeta {
 	margin-top: 20px;
@@ -197,11 +236,15 @@ ul {
 .sectiontwo {
 	position: relative;
 	z-index: 20;
+	height: 300px;
+    left: 50%;
+    transform: translate(-50%, -0%);
   }
 
  .sectionthree {
 	position: relative;
 	z-index: 30;
+	
   }
 
 .section-programa {
